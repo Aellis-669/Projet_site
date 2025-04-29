@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoLink - Mods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles_mods.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="mods.html">Mods</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="images/logo_neolink.png" alt="NeoLink Logo"></a>
+                    </li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Messages</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <div class="filter" id="body-type-filter">
+                <h3>Filtrer par Type de Corps</h3>
+                <div class="filter-group">
+                    <label for="feminin">
+                        <input type="checkbox" id="feminin"> Féminin
+                    </label>
+                    <div class="sub-filter">
+                        <div class="sub-filter-group">
+                            <label>
+                                <input type="checkbox" name="filter" value="bibo-base"> Bibo Base
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="yab"> YAB
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="lavabod"> Lavabod
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="rue"> Rue
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="nymph"> Nymph
+                            </label>
+                        </div>
+                        <div class="sub-filter-group">
+                            <label>
+                                <input type="checkbox" name="filter" value="gen3"> Gen3
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="eve"> Eve
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="filter" value="t&f"> T&F
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label for="masculin">
+                        <input type="checkbox" id="masculin"> Masculin
+                    </label>
+                    <div class="sub-filter">
+                        <label>
+                            <input type="checkbox" name="filter" value="tbse-base"> TBSE base
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="tbse"> TBSE
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="tbse-x"> TBSE-X
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="tbse-q"> TBSE-Q
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="hrbody-base"> HRbody Base
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter" id="race-filter">
+                <h3>Filtrer par Race</h3>
+                <div class="filter-group">
+                    <div class="sub-filter">
+                        <label>
+                            <input type="checkbox" name="filter" value="midlander"> Midlander
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="highlander"> Highlander
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="miqote"> Miqo'te
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="aora"> Ao Ra
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="elezen"> Elezen
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="lalafell"> Lalafell
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="viera"> Viera
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="hrothgar"> Hrothgar
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter" id="body-part-filter">
+                <h3>Filtrer par Emplacement</h3>
+                <div class="filter-group">
+                    <div class="sub-filter">
+                        <label>
+                            <input type="checkbox" name="filter" value="tail"> Queue
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="ear"> Oreilles
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="horn"> Cornes
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="hair"> Cheveux
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="eyes"> Yeux
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="makeup"> Maquillage
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter" id="gear-filter">
+                <h3>Filtrer par Item</h3>
+                <div class="filter-group">
+                    <div class="sub-filter">
+                        <label>
+                            <input type="checkbox" name="filter" value="armor"> Armure
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="clothes"> Vêtements
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="weapon"> Armes
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter" id="other-filter">
+                <h3>Autres Filtres</h3>
+                <div class="filter-group">
+                    <div class="sub-filter">
+                        <label>
+                            <input type="checkbox" name="filter" value="furniture"> Mobilier
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="mount"> Montures
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="minion"> Serviteurs
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="vfx"> VFX
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="animation"> Animations
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="filter" value="housing"> Housing
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <form id="filter-form"> <button type="submit" id="filter-button">Appliquer la sélection</button> </form>
+
+            <ul>
+
+            </ul>
+
+            <footer>
+                <div class="footer-content">
+                    <p>&copy; 2025 NeoLink. Tous droits réservés.</p>
+                    <p><a href="privacy.html">Politique de confidentialité.</a></p>
+                </div>
+            </footer>
+        </aside>
+
+        <section class="content">
+            <h1>Mods</h1>
+            <div class="mods-container">
+                <div class="mods-grid">
+                    <div class="mod-card">
+                        <h3>Galaxy Eyes</h3>
+                        <img src="images/mod1.jpg" alt="Mod 1">
+                        <p class="mod-author"><a href="profil.html?id=1">Tesh'</a></p>
+                        <p class="mod-tags">Tags: #Eyes #Free</p>
+                     </div>
+                    <div class="mod-card">
+                        <h3>Le Passeur</h3>
+                        <img src="images/mod2.jpg" alt="Mod 2">
+                        <p class="mod-author"><a href="profil.html?id=2">Siv</a></p>
+                        <p class="mod-tags">Tags: #Skin #Premium</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Tigress</h3>
+                        <img src="images/mod3.jpg" alt="Mod 3">
+                        <p class="mod-author"><a href="profil.html?id=3">Mizuki</a></p>
+                        <p class="mod-tags">Tags: #Face #MakeUp #Free</p>
+                    </div>
+                    <!-- PLACE HOLDER -->
+                    <!-- <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div>
+                    <div class="mod-card">
+                        <h3>Nom du Mod XX</h3>
+                        <img src="images/modX.jpg" alt="Mod XX">
+                        <p class="mod-author"><a href="profil.html?id=3">Moddeur 3</a></p>
+                        <p class="mod-tags">Tags:</p>
+                    </div> -->
+                    <!-- FIN PLACE HOLDER -->
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="prev">&laquo; Précédent</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#" class="next">Suivant &raquo;</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
