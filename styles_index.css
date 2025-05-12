@@ -83,7 +83,6 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 80vh;
-    padding: 15px;
 }
 
 .content {
@@ -157,7 +156,7 @@ main {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0 0 8px 8px; 
-    padding: 10px; 
+    padding: 0px; 
     text-align: center; 
     color: #ccc; 
     font-size: 0.9rem; 
