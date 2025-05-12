@@ -1,24 +1,35 @@
 body {
-    background: linear-gradient(to right, rgba(10,0,109,1) 0%,rgba(91,0,64,1) 100%);
-    font-family:"Genos", serif;
-    margin:0;
-    padding:0;
+    background: linear-gradient(to bottom, #222222 0%,#444444 50%,#666666 100%);
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
 }
 
 a {
-    color: rgb(255, 255, 255);
+    color: #ff0000;
     text-decoration: none;
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+}
+
+a:hover {
+    color: #ffffff; /* Couleur au survol */
 }
 
 header {
-    background: linear-gradient(to right, rgba(45,146,229,1) 0%,rgba(181,0,191,1) 93%);
-    padding: 15px;
+    background: radial-gradient(ellipse at center, #333333 0%,#222222 50%,#111111 100%);
+    color: white;
+    padding: 1rem 0; /* Réduction du padding vertical */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Ombre plus discrète */
     position: sticky;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100; /* Assure que l'header reste au-dessus des autres éléments */
 }
 
 nav {
@@ -27,7 +38,6 @@ nav {
     align-items: center;
     padding: 0 20px;
     width: 100%;
-
 }
 
 .nav-menu {
@@ -36,15 +46,16 @@ nav {
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    /* padding: 0; */
     margin: 0;
+    padding: 0; /* Suppression du padding inutile */
 }
 
 .nav-menu li {
     text-align: center;
     flex: 0;
-    margin: 0 30px;
-    font-size: 25px;
+    margin: 0 20px; /* Espacement réduit */
+    font-size: 1.5rem; /* Taille de police plus standard */
+    font-weight: 700;
 }
 
 .nav-menu .logo {
@@ -53,37 +64,62 @@ nav {
 }
 
 .nav-menu .logo img {
-    max-height: 80px;
+    max-height: 120px;
+    margin: -10px 0;
 }
 
 main {
     display: flex;
-    padding: 10px;
+    padding: 20px;
     justify-content: space-between;
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 120px);
 }
 
 .sidebar {
-    width: 20%;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius:10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 22%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     min-height: 80vh;
-    margin: 10px;
+    padding: 15px;
 }
 
-ul {
-    padding: 0;
+.content {
+    width: 48%;
+    padding: 0 20px;
 }
 
 .rightbar {
-    width: 25%;
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 28%;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 15px;
-    border-radius:10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.responsive-buttons {
+    display: none; /* Caché sur les écrans plus grands */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Pour être au-dessus du contenu */
+}
+
+.responsive-buttons button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.responsive-buttons button:hover {
+    background-color: #555;
 }
 
 .sidebar ul, .rightbar ul {
@@ -91,75 +127,93 @@ ul {
 }
 
 .sidebar ul li, .rightbar ul li {
-    margin:15px;
+    margin: 10px 0; /* Réduction de la marge verticale */
 }
 
 .sidebar ul li a, .rightbar ul li a {
-    font-size: 25px;
+    font-size: 1.3rem;
     font-weight: 500;
-    transition: color 0.3s;
-}
-
-.sidebar ul li a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
+    transition: color 0.3s ease; /* Transition douce pour le survol */
+    display: flex;
+    align-items: center; 
+    padding: 8px 10px; 
+    border-radius: 5px; 
 }
 
 .sidebar ul li a:hover, .rightbar ul li a:hover {
-    color:black;
+    color: #ffffff; /* Couleur d'accentuation au survol */
+    background-color: rgba(255, 255, 255, 0.05); /* Léger fond au survol */
 }
 
-.sidebar ul li a img:hover {
-    color:#000000
+.sidebar ul li a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: filter 0.3s ease;
 }
 
 .sidebar footer {
     margin-top: auto;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 10px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px; 
+    padding: 10px; 
+    text-align: center; 
+    color: #ccc; 
+    font-size: 0.9rem; 
 }
 
 .content {
-    width: 50%;
+    width: 48%;
     padding: 0 20px;
 }
 
 .post {
-    background: rgba(255, 255, 255, 0.4);
-    color: black;
+    background: rgba(255, 255, 255, 0.08); 
+    color: #e0e0e0; 
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 10 rgba(0, 0, 0, 0.2);
-    transition: tranform 0.3s ease-in-out;
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.2s ease-in-out; /* Transition plus rapide */
+    margin-bottom: 20px; /* Ajout de marge entre les posts */
+}
+
+.post:hover {
+    transform: scale(1.01); /* Effet de légère élévation au survol */
 }
 
 .post .photo {
-    width: auto;
+    width: 100%;
     height: auto;
+    margin-bottom: 10px; /* Ajout de marge sous la photo */
 }
 
 .post .photo img {
-    /* max-width: 720px;
-    max-height: 1720px; */
-    object-fit: contain;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Assure que l'image remplit bien l'espace */
+    max-width: 600px; /* Définis ici la largeur maximale souhaitée (en pixels ou autre unité) */
+    max-height: 800px; /* Définis ici la hauteur maximale souhaitée (en pixels ou autre unité) */
+    margin: 0 auto; /* Centre l'image si elle est plus petite que max-width */
+    display: block; /* Empêche les marges supplémentaires dues à inline */
+    margin-left: auto; /* Centre l'image si elle est plus petite que max-width */
+    margin-right: auto; /* Centre l'image si elle est plus petite que max-width */
 }
 
-/* .post:hover {
-    transform: scale(1.02);
-} */
-
 .post-header {
-    display:flex;
+    display: flex;
     align-items: center;
+    margin-bottom: 10px; 
 }
 
 .avatar {
-    width: 60px;
-    height: 60px;
+    width: 40px; 
+    height: 40px; 
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 10px; /* Ajout de marge à droite de l'avatar */
 }
 
 .avatar img {
@@ -170,262 +224,232 @@ ul {
 
 .username {
     font-weight: 600;
-    margin-left: 10px;
-    font-size: 35px;
-    color: rgb(0, 0, 0);
+    font-size: 1.2rem; 
+    color: #ffffff; 
 }
 
 .test {
     margin: 10px 0;
-    font-size: 20px;
-}
-
-.photo {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-}
-
-.photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem; 
+    color: #ccc; 
 }
 
 .like-btn {
-    background:none;
+    background: none;
     border: none;
     cursor: pointer;
+    padding: 0; 
 }
 
 .like-btn img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
+    margin: -5px 0 -10px 0;
+}
+
+.like-btn:hover img, .liked {
+    filter: color(0%) brightness(100%); /* Icône de like colorée au survol/quand aimé */
+    filter: sepia(100%) hue-rotate(-15deg) brightness(1.2); /* Icône de like colorée au survol/quand aimé */
+    transition: filter 0.2s ease-in-out; /* Transition douce pour le survol */
 }
 
 .like-count {
-    margin: 10px;
-    font-size: 20px;
+    margin-left: 5px; /* Réduction de la marge */
+    font-size: 0.9rem;
     font-weight: 700;
+    color: #ccc;
 }
 
-.liked {
-    filter: brightness(1.5);
+.comment-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px; 
+}
+
+.comment-btn img {
+    width: 25px;
+    height: 25px;
+    margin: -5px 0 -10px 0;
+}
+
+.comment-btn:hover img, .liked {
+    filter: color(0%) brightness(100%); /* Icône de like colorée au survol/quand aimé */
+    filter: sepia(100%) hue-rotate(-15deg) brightness(1.2); /* Icône de like colorée au survol/quand aimé */
+    transition: filter 0.2s ease-in-out; /* Transition douce pour le survol */
 }
 
 .comment-list {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
+    margin-top: 20px; /* Ajout de marge au-dessus de la liste des commentaires */
+    background-color: rgba(255, 255, 255, 0.05); 
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .comment-item {
-    background-color: rgba(0, 0, 0, 0.158);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.1); 
+    padding: 10px;
+    border-radius: 8px; 
+    margin-bottom: 10px; /* Réduction de la marge entre les commentaires */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
 .comment-header {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Réduction de la marge sous l'en-tête du commentaire */
 }
 
 .comment-avatar {
-    width: 40px;
-    height: 40px;
+    width: 30px; /* Taille d'avatar de commentaire plus petite */
+    height: 30px; /* Taille d'avatar de commentaire plus petite */
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 8px; /* Réduction de la marge à droite de l'avatar */
 }
 
 .comment-author {
-    font-weight: bold;
-    color: #00d9ff;
+    font-weight: bolder;
+    color: #ff8787;
+    font-size: 0.9rem; 
 }
 
 .comment-text {
-    font-size: 18px;
-    color: #000000;
-    margin-bottom: 10px;
-    font-weight: 600;
+    font-size: 0.9rem; 
+    color: #e0e0e0; 
+    margin-bottom: 8px; /* Réduction de la marge sous le texte du commentaire */
+    font-weight: 400; 
 }
 
 .comment-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px; /* Réduction de l'espacement entre les actions */
 }
 
 .like-btn-comment {
-    background:none;
+    background: none;
     border: none;
     cursor: pointer;
+    padding: 0; /* Suppression du padding par défaut des boutons */
 }
 
 .like-btn-comment img {
-    width: 20px;
-    height: 20px;
+    width: 20px; 
+    height: 20px; 
+    transition: filter 0.2s ease-in-out;
+    margin: -2px 0 -4px 0;
+}
+
+.like-btn-comment:hover img, .liked {
+    filter: grayscale(0%) brightness(100%); /* Icône de like colorée au survol/quand aimé */
 }
 
 .like-count-comment {
-    font-size: 16px;
-    color: #fff;
+    font-size: 0.8rem; 
 }
 
 .comment-input {
-    width: 100%;
+    width: calc(100% - 20px); /* Ajustement de la largeur avec le padding */
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-top: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-size: 14px;
+    margin-top: 10px; /* Réduction de la marge supérieure */
+    background-color: rgba(255, 255, 255, 0.05); /* Fond plus sombre et subtil */
+    color: #e0e0e0;
+    font-size: 0.9rem; 
 }
 
-.rightbar .widget {
-    /* padding: 15px; */
-    border-radius: 10px;
-    /* background-color: rgba(255,255,255,0.2); */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) */
+.comment-input::placeholder {
+    color: #aaa; /* Couleur du texte de l'espace réservé */
 }
 
-.rightbar h3{
-    color:white;
+.rightbar h3 {
+    color: #ffffff; 
     text-align: center;
-    font-size: 25px;
+    font-size: 1.1rem; 
+    margin-bottom: 10px; /* Ajout de marge sous le titre */
 }
 
 .release-box {
     display: flex;
     margin-bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.158);
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Alignement vertical des éléments */
 }
 
 .release-box img {
-    max-width: 80%;
-    height: Auto;
+    max-width: 35%; /* Réduction de la taille de l'image */
+    height: auto;
     border-radius: 5px;
     object-fit: cover;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
+    margin-left: 10px; /* Ajout de marge à gauche de l'image */
 }
 
 .release-info {
     flex: 1;
+    margin-left: 10px; /* Ajout de marge à gauche des infos */
 }
 
 .release-info h4 {
-    color: white;
+    color: #ffffff;
     margin: 0 0 5px 0;
-    font-size: 20px;
+    font-size: 0.9rem;
 }
 
 .release-info p {
-    color: #ddd;
+    color: #ccc; 
     margin: 0;
-    font-size: medium;
+    font-size: 0.8rem;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5px;
-}
-.tag {
-    background-color:rgba(0, 0, 0, 0.329);
-    color: white;
-    padding: 2px 5px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-
+    gap: 5px; /* Réduction de l'espacement entre les tags */
 }
 
-/* footer {
-    background: linear-gradient(to right, rgb(2, 33, 58) 0%,rgba(44, 1, 46, 0.568) 93%);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-} */
-
-.footer-content {
-    text-align: center;
-    width: 100%;
-}
-
-.footer-content p {
-    color: white;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.footer-content a {
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-content a:hover {
-    color:black
-}
-
-
-/* Media Queries */
-
-@media (max-width: 915px) {
+/* Styles pour les écrans plus petits (par exemple, moins de 768px de largeur) */
+@media (max-width: 768px) {
     main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sidebar {
-        width: 100%;
-        /* margin-bottom: 20px; */
-    }
-
-    .content {
-        width: 100%;
-    }
-
-    .rightbar {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    nav {
-        flex-direction: grid;
-        align-items: center;
+        flex-direction: column; /* Empile les éléments verticalement */
         padding: 10px;
     }
 
-    .nav-menu {
-        flex-direction: column;
-        align-items: center;
+    .sidebar, .rightbar {
+        display: none; /* Cache la sidebar et la rightbar par défaut sur les petits écrans */
+        position: fixed; /* Pour le pop-up */
+        top: 0;
+        left: 0;
+        width: 80%; /* Prend une grande partie de l'écran */
+        height: 100%;
+        background-color: rgba(34, 34, 34, 0.95); 
+        z-index: 999; /* Au-dessus du contenu principal */
+        overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+        padding: 20px;
+        box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur */
+        transform: translateX(-100%); /* Cache initialement hors de l'écran à gauche */
+        transition: transform 0.3s ease-in-out; /* Animation pour l'apparition */
     }
 
-    .nav-menu li {
-        margin: 10px 0;;
+    .rightbar {
+        left: auto;
+        right: 0;
+        transform: translateX(100%); /* Cache initialement hors de l'écran à droite */
     }
 
-    .nav-menu .logo {
-      margin: 5 20px;
+    .sidebar.open, .rightbar.open {
+        transform: translateX(0); /* Affiche le pop-up en le faisant glisser */
+    }
+
+    .content {
+        width: 100%; /* Le contenu prend toute la largeur */
+        padding: 10px;
+    }
+
+    .responsive-buttons {
+        display: block; /* Affiche les boutons sur les petits écrans */
     }
 }
