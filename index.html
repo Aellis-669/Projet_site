@@ -7,7 +7,7 @@
     <title>NeoLink</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles_index.css">
 </head>
 
@@ -15,11 +15,11 @@
     <header>
         <nav>
             <div class="nav-container">
-                <ul class="nav-menu">  
+                <ul class="nav-menu">
                     <li><a href="mods.html">Mods</a></li>
                     <li><a href="forum.html">Forum</a></li>
-                    <li class="logo">  <a href="index.html">
-                        <img src="images/logo_neolink.png" alt="NeoLink Logo"></a></li>
+                    <li class="logo"> <a href="index.html">
+                            <img src="images/logo.png" alt="NeoLink Logo"></a></li>
                     <li><a href="#">Notifications</a></li>
                     <li><a href="#">Messages</a></li>
                 </ul>
@@ -28,6 +28,10 @@
     </header>
 
     <main>
+        <div class="responsive-buttons">
+            <button class="sidebar-toggle-btn">☰ Menu</button>
+            <button class="rightbar-toggle-btn">Dernières Sorties</button>
+        </div>
         <aside class="sidebar">
             <ul>
                 <li><a href="feed.html"><img src="images/feed.png" alt=feed>Fil d'actualités</a></li>
@@ -48,32 +52,34 @@
             <div class="post">
                 <div class="post-header">
                     <div class="avatar">
-                        <img src="images/avatar.png" alt="Avatar de Tesh">
+                        <img src="images/user.png" alt="Avatar de Tesh">
                     </div>
                     <span class="username">Tesh'pya</span>
                 </div>
                 <p class="test">Devinez qui débarque sur NeoLink ?.</p>
                 <div class="photo">
-                    <img src="images/post.jpg" alt="Média du post">
+                    <img src="images/image.png" alt="Média du post">
                 </div>
 
                 <div class="post-actions">
-                    <button class="like-btn" onclick="likePost(this)" aria-label="J'aime">
+                    <button class="like-btn" aria-label="J'aime">
                         <img src="images/like.png" alt="Bouton J'aime">
                     </button>
                     <span class="like-count">69</span>
-                    <button class="comment-btn" onclick="toggleComment(this)">Commentaires</button>
+                    <button class="comment-btn">
+                        <img src="images/comment.png" alt="Icône Commentaire">
+                    </button>
                 </div>
 
                 <div class="comment-list">
                     <div class="comment-item">
                         <div class="comment-header">
-                            <img class="comment-avatar" src="images/avatar1.png" alt="Avatar de Jack">
+                            <img class="comment-avatar" src="images/user.png" alt="Avatar de Jack">
                             <span class="comment-author">Ash</span>
                         </div>
                         <p class="comment-text">Oh, regardez qui voilà !</p>
                         <div class="comment-actions">
-                            <button class="like-btn-comment" onclick="likeComment(this)" aria-label="J'aime le commentaire">
+                            <button class="like-btn-comment" aria-label="J'aime le commentaire">
                                 <img src="images/like.png" alt="Bouton J'aime">
                             </button>
                             <span class="like-count-comment">0</span>
@@ -82,12 +88,12 @@
 
                     <div class="comment-item">
                         <div class="comment-header">
-                            <img class="comment-avatar" src="images/avatar2.png" alt="Avatar de Saro">
+                            <img class="comment-avatar" src="images/user.png" alt="Avatar de Saro">
                             <span class="comment-author">Mizuki</span>
                         </div>
                         <p class="comment-text">Bienvenue sur le meilleur réseau social d'Aetherys !</p>
                         <div class="comment-actions">
-                            <button class="like-btn-comment" onclick="likeComment(this)" aria-label="J'aime le commentaire">
+                            <button class="like-btn-comment" aria-label="J'aime le commentaire">
                                 <img src="images/like.png" alt="Bouton J'aime">
                             </button>
                             <span class="like-count-comment">0</span>
@@ -95,50 +101,50 @@
                     </div>
 
                     <input type="text" class="comment-input" placeholder="Écrivez un commentaire...">
-                </div>                
+                </div>
             </div>
         </section>
 
         <aside class="rightbar">
             <div class="widget">
                 <h3>Dernières sorties :</h3>
-    
+
                 <div class="release-box">
                     <div class="release-info">
                         <h4>Galaxy Eyes</h4>
                         <p>By: Tesh'</p>
-                        <img src="images/mod1.jpg" alt="Mod 1">
+                        <img src="images/image.png" alt="Mod 1">
                         <div class="tags">
                             <span class="tag">#Eyes</span>
                             <span class="tag">#Free</span>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="release-box">
                     <div class="release-info">
                         <h4>Le Passeur</h4>
                         <p>By: Siv</p>
-                        <img src="images/mod2.jpg" alt="Mod 2">
+                        <img src="images/image.png" alt="Mod 2">
                         <div class="tags">
                             <span class="tag">#Skin</span>
                             <span class="tag">#Premium</span>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="release-box">
                     <div class="release-info">
                         <h4>Tigress</h4>
                         <p>By: Mizuki</p>
-                        <img src="images/mod3.jpg" alt="Mod 3">
+                        <img src="images/image.png" alt="Mod 3">
                         <div class="tags">
                             <span class="tag">#MakeUp</span>
                             <span class="tag">#Free</span>
                         </div>
                     </div>
                 </div>
-              </div>
+            </div>
         </aside>
     </main>
 
