@@ -1,3 +1,10 @@
+# Last Update
+12/05/2025 - Changement apportés au visuel, changement de charte graphique
+- index.html
+- styles_index.html
+- script.js
+
+
 # Page d'accueil d'un réseau social 
 
 ## Présentation
